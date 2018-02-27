@@ -1,0 +1,2 @@
+\section{HPCC Systems}
+HPCC (High Performance computer cluster) systems are open source tool which offers the BigData related services \cite{HPCC}. HPCC contains tools that deal with complex data structure and large scale of data amount. It is a powerful open source tool for data analyze, especially for the significant size of data. The functionalities of HPCC such as fast querying to different databases, , data visualization, and data management have good reputation to many users.
