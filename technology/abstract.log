@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.26)  26 FEB 2018 22:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.26)  1 MAR 2018 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1977,7 +1977,28 @@ LaTeX Warning: Citation 'GoogleCP_BDS' on page 1 undefined on input line 3.
 l.3 ...age their data and proceed data analyzing &
                                                    machine learning in order...
 
-? 
+? ?
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, E to edit your file,
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
+? h
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+? H
+Sorry, I already gave what help I could...
+Maybe you should try asking a human?
+An error might have occurred before I noticed any problems.
+``If all else fails, read the instructions.''
+
+? R
+OK, entering \nonstopmode...
 
 LaTeX Warning: Citation 'GoogleCP_BDS' on page 1 undefined on input line 3.
 
