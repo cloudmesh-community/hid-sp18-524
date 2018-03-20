@@ -1,6 +1,5 @@
- # The README file.
- 
- 'FirstName': 'Hao',
- 'LastName': 'Tian',
- 'Hid': 'hid-sp18-524',
- 'Community': 'INFO-I524'
+ owner:
+   firstname: 'Hao'
+   lastname: 'Tian'
+   hid: 'hid-sp18-524'
+   community: 'INFO-I524'
