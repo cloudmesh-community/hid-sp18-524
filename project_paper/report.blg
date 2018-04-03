@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: report.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: report.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--no key, author in data
+Warning--no author, editor, organization, or key in data
+Warning--to sort, need author or key in data
+Warning--no key, author in data
+Warning--no key, author in data
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--no key, author in data
+Warning--no author, editor, organization, or key in data
+Warning--empty author in data
+Warning--empty year in data
+You've used 1 entry,
+            5758 wiz_defined-function locations,
+            1310 strings with 15352 characters,
+and the built_in function-call counts, 1450 in all, are:
+= -- 157
+> -- 0
+< -- 0
++ -- 0
+- -- 53
+* -- 103
+:= -- 102
+add.period$ -- 4
+call.type$ -- 1
+change.case$ -- 4
+chr.to.int$ -- 1
+cite$ -- 14
+duplicate$ -- 78
+empty$ -- 63
+format.name$ -- 0
+if$ -- 278
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 50
+num.names$ -- 0
+pop$ -- 66
+preamble$ -- 1
+purify$ -- 7
+quote$ -- 0
+skip$ -- 20
+stack$ -- 0
+substring$ -- 238
+swap$ -- 5
+text.length$ -- 107
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 30
+warning$ -- 9
+while$ -- 1
+width$ -- 0
+write$ -- 57
+(There were 9 warnings)

@@ -1,0 +1,58 @@
+% status: 0
+% chapter: TBD
+
+\title{Classifying Census Income of US (1994 to 1995) bases on multi-variables by deploying Apache Spark on Kubernetes}
+
+\author{Hao Tian}
+\affiliation{%
+  \institution{Indiana University}
+  \streetaddress{School of Informatics, Computing and Engineering}
+  \city{Bloomington} 
+  \state{IN} 
+  \postcode{47408}
+  \country{USA}}
+\email{tian4@indiana.edu}
+
+
+% The default list of authors is too long for headers}
+\renewcommand{\shortauthors}{H. Tian.}
+
+
+\begin{abstract}
+This the the report of final project in INFO-I 524 Advanced Cloud Computing. The project includes cloud computing technologies, machine learning algorithms and big data analyzing concepts. The project direction and procedure follows the Section 90.3 in Chapter 90 in \textit{the Handbook of Clouds and Big Data}.
+\end{abstract}
+
+\keywords{Apache Spark, Kubernetes, Census Income, Classification, Python}
+
+\maketitle
+
+\section{Introduction}
+This project is to build a cloud computing application for classifing the census income data of the adults in the United State during 1994 to 1995 by multiple variables, such as educational background, work categories, geographic location and so on. The ultimate goal is to use the result of  classification on the data to conclude the factors which influence the income of the people, and try to concludes the general economical status of the United State during that period. The cloud computing application is deployed on the Kubernetes system with Apache Spark APIs, the data will be classified by some specific machine learning algorithms in the Spark MLlib. The major code for constructing the project is Python.
+
+The general procedure of this project are (follows the priciples of Section 90.3.2 in \textit{the Handbook of Clouds and Big Data}):
+\begin{enumerate}
+\item Find the data size of census income data from the UCI Machine Learning Repository. The data size is 103.9 MB~\cite{data}.
+\item Deploy the Kubernetes system with the Apache Spark.
+\item Study the data, find the methods for classifying the data with different variables. Each variable in the data could be a potential factors that splits the high-income population and low-income population.
+
+The current plan to classify the data is by each variables: every variables is a factor which might influences the differeny levels of income. Each variables of the data splits the incomes into 3 different levels: high, medium, low. The standards of dividing the levels should be considered by the general distribution of the incomes in the data.
+\item Clean or reconstruct the data. \textbf{This step will likely be repeated lately for fitting specific machine learning algorithms.}
+\item Using Swagger or Flask Rest Service to send the data into the system that has been deployed and get the result of classification.
+\item Take the output to my personal computer.
+\item Create a Makefile (for basic commmands) and requirements.txt for pip installation.
+\item Pack the project with dockers and finished the report
+\end{enumerate}
+
+This is a general percedure of working on this project, the procedures might change in details bases on different situations. 
+
+\section{Acknowledgments}
+\begin{acks}
+
+  The authors would like to thank Dr.~Gregor~von~Laszewski for his
+  support and suggestions to write this paper.
+
+\end{acks}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{report} 
+
