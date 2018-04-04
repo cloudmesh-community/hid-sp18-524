@@ -1,7 +1,7 @@
 % status: 0
 % chapter: TBD
 
-\title{Classifying Census Income of US (1994 to 1995) bases on multi-variables by deploying Apache Spark on Kubernetes}
+\title{Big Data in Health Care}
 
 \author{Hao Tian}
 \affiliation{%
@@ -19,31 +19,22 @@
 
 
 \begin{abstract}
-This the the report of final project in INFO-I 524 Advanced Cloud Computing. The project includes cloud computing technologies, machine learning algorithms and big data analyzing concepts. The project direction and procedure follows the Section 90.3 in Chapter 90 in \textit{the Handbook of Clouds and Big Data}.
-\end{abstract}
+The health care at today is an important topic in world wide, and as the population on the earth is growing, the health of human being need to be protected by more advanced method and technology. For tracking the health condition of citizens, each countries needs a complete medical care system, which could monitors the general health condition of people, and offers valuable information to medical services, such as hospitals, disease research institutions, even national security agencies. However, as the number of population on the earth now, the traditional methods and technologies cannot fully support the requirement of satisfying the health care for the most people.
 
-\keywords{Apache Spark, Kubernetes, Census Income, Classification, Python}
+For satisfying the purpose of severing all people with well functioning health care system, the cutting edge technology concepts - Big Data, brings a great generation for developing better health care systems. The basic concept of the Big Data is to process and analyse large mount of data, includes data mining, data visualization, and using machine learning knowledge to predict the future situation. With the large data amount in the health care fields, using the knowledges for processing Big Data is very helpful for dealing with issues in health care systems is facing today. 
+
+This is paper discusses the Big Data technologies and application that are currently using in health care fields and the possible technologies that might be used in the future in order to improve the quality of health care. The serious illnesses, such as cancers, AIDS and other deadly diseases are also include in the discussion about the technologies concern with health care. 
+\end{abstract} 
+
+\keywords{I524, HID524, Big Data, Health Care, Medical Care, Data Mining, Cancer.}
 
 \maketitle
 
 \section{Introduction}
-This project is to build a cloud computing application for classifing the census income data of the adults in the United State during 1994 to 1995 by multiple variables, such as educational background, work categories, geographic location and so on. The ultimate goal is to use the result of  classification on the data to conclude the factors which influence the income of the people, and try to concludes the general economical status of the United State during that period. The cloud computing application is deployed on the Kubernetes system with Apache Spark APIs, the data will be classified by some specific machine learning algorithms in the Spark MLlib. The major code for constructing the project is Python.
+\subsection{Health care}
+By starting this paper, we need to define what is health care. According to the definition from Merriam Webster dictionary: the health care is a efforts to maintain people in a healthy condition by trained and licensed medical professional~\cite{def_hc}. The healthy condition indicates both physical and mental status are healthy and well-being, they are basic factors which lead people to live in a happy life. 
 
-The general procedure of this project are (follows the priciples of Section 90.3.2 in \textit{the Handbook of Clouds and Big Data}):
-\begin{enumerate}
-\item Find the data size of census income data from the UCI Machine Learning Repository. The data size is 103.9 MB~\cite{data}.
-\item Deploy the Kubernetes system with the Apache Spark.
-\item Study the data, find the methods for classifying the data with different variables. Each variable in the data could be a potential factors that splits the high-income population and low-income population.
-
-The current plan to classify the data is by each variables: every variables is a factor which might influences the differeny levels of income. Each variables of the data splits the incomes into 3 different levels: high, medium, low. The standards of dividing the levels should be considered by the general distribution of the incomes in the data.
-\item Clean or reconstruct the data. \textbf{This step will likely be repeated lately for fitting specific machine learning algorithms.}
-\item Using Swagger or Flask Rest Service to send the data into the system that has been deployed and get the result of classification.
-\item Take the output to my personal computer.
-\item Create a Makefile (for basic commmands) and requirements.txt for pip installation.
-\item Pack the project with dockers and finished the report
-\end{enumerate}
-
-This is a general percedure of working on this project, the procedures might change in details bases on different situations. 
+Each countries in the world has different health care systems to maintain citizens health and protect citizens from getting diseases. The countries like Canada, the United Kingdom, and China have uniformed health care systems, they like national health care services which was provides to all the citizens~\cite{ca_hc, uk_hc, cn_hc}. The United States of America, as a developed country, has very unique status on health care: U.S. does not have a uniform health care system, and has no universal health care coverage for U.S. citizens until 2016~\cite{us_hc}. The free-market of medical care in U.S. brought great value to the U.S. economic growth~\cite{us_hccost}, but lacking of government management causes troubles for people to access the health care services with low cost~\cite{us_hcs}.
 
 \section{Acknowledgments}
 \begin{acks}
