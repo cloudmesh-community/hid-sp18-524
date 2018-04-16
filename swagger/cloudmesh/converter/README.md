@@ -58,10 +58,9 @@ I followed the instruction from chapter 34: REST Service Generation with Swagger
         Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
         
 ## Test The Server
-* Add the base path after the http://0.0.0.0:8080/ with a binary or decimal number. For example, if you want to convert a binary number to a decimal. Same for converting the decimal to binary:
+* Add the base path after the http://0.0.0.0:8080/ with a binary or decimal number. For example, if you want to convert a binary number to a decimal: http://0.0.0.0:8080/api/to-decimal/101 (a binary number).
 
-	http://0.0.0.0:8080/api/to-binary/5 (a decimal number)
-	http://0.0.0.0:8080/api/to-decimal/101 (a binary number)
+Same for converting the decimal to binary: http://0.0.0.0:8080/api/to-binary/5 (a decimal number).
 
 ## Additional
 * If you use swagger codegen to reproduce the server, you might run into a situation that the default_controller.py becomes empty. Please use the default_controller.py in the repo to refill the code if you run into this situation.
