@@ -1,0 +1,66 @@
+swagger: "2.0"
+info: 
+  version: "0.0.1"
+  title: "profile"
+  description: "A simple service to convert number between binary and decimal format"
+  termsOfService: "http://swagger.io/terms/"
+  contact: 
+    name: "Binary and decimal number converter REST Service Example"
+  license: 
+    name: "Apache"
+host: "localhost:8080"
+basePath: "/api"
+schemes: 
+  - "http"
+consumes: 
+  - "application/json"
+produces: 
+  - "application/json"
+paths:
+  /to-decimal/{num}:
+    get: 
+      description: "Convert binary number to decimal"
+      operationId: binaryToDecimal
+      parameters:
+        - name: num
+          in: path
+          required: true
+          type: string
+      produces: 
+        - "application/json"
+      responses: 
+        "200":
+          description: "Decimal info"
+          schema: 
+            $ref: "#/definitions/DECIMAL"
+  /to-binary/{num}:
+    get: 
+      description: "convert decimal number to binary"
+      operationId: decimalToBinary
+      parameters:
+        - name: num
+          in: path
+          required: true
+          type: string
+      produces: 
+        - "application/json"
+      responses: 
+        "200":
+          description: "Binary info"
+          schema: 
+            $ref: "#/definitions/BINARY"
+definitions:
+  DECIMAL:
+    type: "string"
+    required:
+      - "result"
+    properties:
+      result:
+        type: "string"
+  BINARY:
+    type: "string"
+    required:
+      - "result"
+    properties:
+      result:
+        type: "string"

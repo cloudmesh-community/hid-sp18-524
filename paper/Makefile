@@ -5,6 +5,8 @@ DEFAULT=$(FILE)
 LATEX=pdflatex
 BIBTEX=bibtex
 
+SAMPLE=../../hid-sample
+
 UNAME := $(shell uname)
 
 ifeq ($(UNAME), Darwin)
@@ -23,21 +25,41 @@ endif
 #>> report-latex.log 2>&1
 #	make -f Makefile check >> report-latex.log 2>&1
 
-all: clean iureport
-	$(LATEX) ${FILE}
-	$(LATEX) ${FILE}
+
+all: prepare
+	make -f Makefile generate
+
+generate: clean iureport check log
+	$(LATEX) ${FLAGS} ${FILE}
 	$(BIBTEX) ${FILE}
-	$(LATEX) ${FILE}
+	$(LATEX) ${FLAGS} ${FILE}
+	$(LATEX) ${FLAGS} ${FILE}
+
+prepare:
+	cd ../../hid-sample; git pull
+	cp ../../hid-sample/paper/Makefile .
+	cp ../../hid-sample/paper/report.tex .
 
 iureport:
-	cp ../../hid-sample/tex/format/iureport.cls .
-	cp ../../hid-sample/tex/format/ACM-Reference-Format.bst .
+	cp $(SAMPLE)/tex/format/iureport.cls .
+	cp $(SAMPLE)/tex/format/ACM-Reference-Format.bst .
 
-check:
-	chktex -q -n 13 -n 8 content.tex
+check: prepare
+	@$(SAMPLE)/bin/check-quotes.py content.tex
+	@chktex -q -n 13 -n 8 content.tex
 
 check-ta:
-	@python 	../../hid-sample/paper/check.py 
+	@python $(SAMPLE)/paper/check.py 
+
+log:
+	@echo '\\appendix' > check.tex
+	@echo '\\section{chktex}'>> check.tex
+	@echo '\\begin{tiny}'>> check.tex
+	@echo '\\begin{verbatim}'>> check.tex
+	@make check >> check.tex
+	@echo "\\end{verbatim}" >> check.tex
+	@echo '\\end{tiny}'>> check.tex
+	@echo "creating check.tex"
 
 bibtex:
 	@echo 

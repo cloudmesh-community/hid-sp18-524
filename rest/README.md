@@ -1,0 +1,5 @@
+# Rest eve Assignment
+* Please run by:
+	python run.py
+* For informations about Processor, Operating system, and disk space, please add root after the link (The routes names are in the 'run.py')
+
